@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <button mat-raised-button routerLink="/new-company" class="new-company">Δημιουργία υπηρεσίας</button>
+      <a mat-list-item routerLink="">Home</a>
+      <a mat-list-item routerLink="/login">Login</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <div class="flex-container">
+      <mat-toolbar color="primary">
+        <div class="flex1">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+          >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <!--<span>eBill-manager</span>-->
+        </div>
+
+        <div class="flex2">
+
+        </div>
+
+        <div class="flex3">
+          <div class="rightNav">
+            <img class="avatar" mat-card-avatar [src]="auth.LoggedUser.photoURL">
+            <div class="">
+              <button class="userProfileBtn" mat-button [matMenuTriggerFor]="userPorfile">{{auth.LoggedUser.displayName}}</button>
+            </div>
+          </div>
+
+
+          <mat-menu #userPorfile="matMenu">
+            <button mat-menu-item routerLink="/profile">Profile</button>
+            <button mat-menu-item (click)="auth.signOut()">Logout</button>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+    </div>
+
+    <!-- Add Content Here -->
+    <div class="main-layout">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

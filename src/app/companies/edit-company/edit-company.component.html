@@ -1,0 +1,41 @@
+<mat-card class="new-company">
+  <mat-card-title>
+    <h3>Επεξεργασία εταιρίας</h3>
+  </mat-card-title>
+
+  <mat-card-content>
+    <div>
+      <form [formGroup]="form" (ngSubmit)="save()">
+        <div class="example-container">
+          <div>
+            <mat-form-field class="input">
+              <input matInput placeholder="Όνομα" formControlName="name">
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="input">
+              <input matInput placeholder="Τύπος" formControlName="type">
+            </mat-form-field>
+          </div>
+        </div>
+
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+            Αποθήκευση
+          </button>
+
+          <button mat-raised-button routerLink="/">Ακύρωση</button>
+
+
+        </mat-card-actions>
+      </form>
+    </div>
+
+    <mat-card-footer>
+    </mat-card-footer>
+
+  </mat-card-content>
+</mat-card>
+

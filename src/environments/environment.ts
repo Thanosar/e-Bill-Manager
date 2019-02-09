@@ -1,9 +1,17 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+// The index-company of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCduC6Dn0FZX9IouvA-lzKRK24ku3N5RTU',
+    authDomain: 'ebill-manager.firebaseapp.com',
+    databaseURL: 'https://ebill-manager.firebaseio.com',
+    projectId: 'ebill-manager',
+    storageBucket: 'ebill-manager.appspot.com',
+    messagingSenderId: '219265272876'
+  }
 };
 
 /*

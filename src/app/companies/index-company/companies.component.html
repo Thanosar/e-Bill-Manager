@@ -1,0 +1,46 @@
+
+
+<div class="container" fxLayout="row wrap"  fxLayoutAlign="flex-start">
+  <div fxFlex="25%" *ngFor="let service of servicesList">
+    <mat-card class="company-card" >
+      <mat-card-title>
+        <img src="https://www.newsbeast.gr/files/1/2017/12/wroeyin2.jpg" alt="" class="company-logo">
+      </mat-card-title>
+
+
+      <mat-card-content >
+        <div>
+          <p>Όνομα: {{service.name}}</p>
+          <p>Τύπος: {{service.type}}</p>
+
+
+          <mat-card-actions>
+            <button mat-raised-button style="background-color: #c5cae9; color: white;">
+              <a [routerLink]="['/company/edit/', service.id]" >Επεξεργασία</a>
+            </button>
+
+            <button mat-raised-button (click)="onDelete(service.id)" color="warn">
+              Διαγραφή
+            </button>
+          </mat-card-actions>
+        </div>
+
+        <mat-card-footer>
+        </mat-card-footer>
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+    <div class="" >
+
+  </div>
+</div>
+
+
+
+<div class="plus-button">
+  <button mat-fab routerLink="/company/create">Add</button>
+</div>
+
+

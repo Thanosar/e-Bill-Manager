@@ -1,0 +1,46 @@
+.container {
+  min-height: 100%;
+  width: 100%;
+  background-color: white!important;
+}
+
+.company-card {
+  width: 280px;
+  background-color: #dedede;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.company-logo {
+  width: 312px;
+  margin-top: -16px;
+  margin-left: -16px;
+  border-radius: 10px;
+}
+
+.plus-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  border: 2px dashed #f16624;
+  border-radius: 5px;
+  background: white;
+  margin: 10px 0;
+
+ /*:&hovering {*/
+   /*border: 2px solid #f16624;*/
+   /*color: #dadada !important;*/
+ /*}*/
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}
