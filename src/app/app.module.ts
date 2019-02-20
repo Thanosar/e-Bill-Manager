@@ -7,9 +7,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
-
+import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './core/login/login.component';
@@ -32,6 +31,8 @@ import { CompaniesComponent } from './companies/index-company/companies.componen
 import { CreateCompanyComponent } from './companies/create-company/create-company.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { EditCompanyComponent } from './companies/edit-company/edit-company.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { EditCompanyComponent } from './companies/edit-company/edit-company.comp
   ],
   imports: [
     BrowserModule,
+    DropzoneModule,
     FormsModule,
     FlexLayoutModule,
     ReactiveFormsModule,

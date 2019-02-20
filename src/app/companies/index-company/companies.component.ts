@@ -38,6 +38,7 @@ export class CompaniesComponent implements OnInit {
         };
 
       });
+      console.log( this.servicesList);
     });
   }
 

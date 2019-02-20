@@ -3,25 +3,26 @@
 <div class="container" fxLayout="row wrap"  fxLayoutAlign="flex-start">
   <div fxFlex="25%" *ngFor="let service of servicesList">
     <mat-card class="company-card" >
-      <mat-card-title>
-        <img src="https://www.newsbeast.gr/files/1/2017/12/wroeyin2.jpg" alt="" class="company-logo">
+      <mat-card-title class="card-title">
+        <img src="{{service.logoUrl}}" alt="" class="company-logo">
       </mat-card-title>
 
 
-      <mat-card-content >
+      <mat-card-content class="card-content">
         <div>
-          <p>Όνομα: {{service.name}}</p>
-          <p>Τύπος: {{service.type}}</p>
+          <h2> {{service.name}}</h2>
+          <p style="color: #c5c5c5;">{{service.type}}</p>
 
 
-          <mat-card-actions>
-            <button mat-raised-button style="background-color: #c5cae9; color: white;">
-              <a [routerLink]="['/company/edit/', service.id]" >Επεξεργασία</a>
-            </button>
+          <button mat-raised-button type="button" class="view-me-button">Προβολή</button>
 
-            <button mat-raised-button (click)="onDelete(service.id)" color="warn">
-              Διαγραφή
-            </button>
+          <mat-card-actions style="text-align: right; margin-top: 30px">
+            <button mat-mini-fab color="primary" style="margin-right: 10px;"
+                    title="Επεξεργασία"
+                    [routerLink]="['/company/edit/', service.id]">Ε
+              </button>
+
+            <button mat-mini-fab (click)="onDelete(service.id)" color="warn" title="Διαγραφή">D</button>
           </mat-card-actions>
         </div>
 
