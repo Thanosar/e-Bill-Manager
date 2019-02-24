@@ -20,7 +20,7 @@ export class NavComponent implements OnInit{
               public auth: AuthService) {}
 
   ngOnInit() {
-    console.log(this.auth.LoggedUser);
+    
   }
 
 }

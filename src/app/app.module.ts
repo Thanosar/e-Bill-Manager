@@ -21,6 +21,7 @@ import {
   MatSidenavModule,
   MatButtonModule,
   MatCardModule,
+  MatTableModule,
   MatToolbarModule, MatListModule, MatFormFieldModule, MatInputModule
 } from '@angular/material';
 import { NavComponent } from './core/nav/nav.component';
@@ -31,6 +32,7 @@ import { CompaniesComponent } from './companies/index-company/companies.componen
 import { CreateCompanyComponent } from './companies/create-company/create-company.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { EditCompanyComponent } from './companies/edit-company/edit-company.component';
+import { PaymentsComponent } from './payments/payments.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { EditCompanyComponent } from './companies/edit-company/edit-company.comp
     UserProfileComponent,
     CompaniesComponent,
     CreateCompanyComponent,
-    EditCompanyComponent
+    EditCompanyComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { EditCompanyComponent } from './companies/edit-company/edit-company.comp
     MatListModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTableModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

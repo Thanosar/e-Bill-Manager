@@ -7,6 +7,7 @@ import {UserProfileComponent} from './user-profile/user-profile.component';
 import {CompaniesComponent} from './companies/index-company/companies.component';
 import {CreateCompanyComponent} from './companies/create-company/create-company.component';
 import {EditCompanyComponent} from './companies/edit-company/edit-company.component';
+import {PaymentsComponent} from './payments/payments.component';
 
 const routes: Routes = [
   { path: 'login',
@@ -30,6 +31,10 @@ const routes: Routes = [
       {
         path: 'company/edit/:id',
         component: EditCompanyComponent
+      },
+      {
+        path: ':id/payments',
+        component: PaymentsComponent
       }
     ]
   },

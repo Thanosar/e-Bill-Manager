@@ -66,14 +66,12 @@ export class CreateCompanyComponent implements OnInit {
 
     // The storage path
     const path = `test/${new Date().getTime()}_${file.name}`;
-    console.log(path);
 
     // Totally optional metadata
     const customMetadata = { app: 'My AngularFire-powered PWA!' };
 
     // The main task
     this.task = this.storage.upload(path, file, { customMetadata });
-    console.log( this.task);
 
     // Progress monitoring
     this.percentage = this.task.percentageChanges();
@@ -91,7 +89,6 @@ export class CreateCompanyComponent implements OnInit {
   save() {
     if (this.form.valid) {
       const data = this.form.value;
-
       this.company.createService(data).then((res: any) => {
         if (res.success) {
           console.log('Document successfully written!');

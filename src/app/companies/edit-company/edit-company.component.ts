@@ -30,6 +30,7 @@ export class EditCompanyComponent implements OnInit {
       this.id = params.id;
 
       this.companies.getService(this.id).then(function (doc) {
+        console.log(doc);
         if (doc.exists) {
           const company = doc.data();
           for (const attr in company) {
